@@ -40,12 +40,12 @@ The code uses direct interrupts and `micros()` to measure time between pulses on
 
 ## References and Further Reading
 
-- [Quadrature Encoder Basics – Video 1 (YouTube)](https://www.youtube.com/watch?v=woCLkFvYCb0&t=9s)  
+- [Quadrature Encoder Basics – Video 1 (YouTube)](https://www.youtube.com/watch?v=woCLkFvYCb0&t=9s)
+- [Type of Encoder as Absolute or Incremental – Video 2 (YouTube)](https://www.youtube.com/watch?v=-Qk--Sjgq78)
 - [Arduino Official Interrupt Reference](https://docs.arduino.cc/language-reference/en/functions/external-interrupts/attachInterrupt/)  
 - [Quadrature Encoder Wikipedia Article](https://en.wikipedia.org/wiki/Rotary_encoder#Incremental_rotary_encoder)  
 - [Pico Arduino Core Documentation](https://arduino-pico.readthedocs.io/en/latest/)  
 - [PJRC Encoder Library (for comparison)](https://www.pjrc.com/teensy/td_libs_Encoder.html)
-- [Type of Encoder as Absolute or Incremental](https://www.youtube.com/watch?v=-Qk--Sjgq78)
 
 These links give background on how encoders work, how interrupts are handled on Arduino-style boards, and how the common Encoder library implements similar functionality.
 
