@@ -82,6 +82,30 @@ void loop() {
 | wheelSpeed_kmph  | km/h  | Linear speed           |
 | wheelAngleDeg    | °     | Wheel angular position |
 
+## Note: Home Position / Initial Tick Value
+### By default, the library considers the encoder position as zero on startup.
+If you want to start from a custom position instead of zero (for example, to set a known home/reference point), you can use the following snippet:
+
+```cpp
+#include <MotorEncoder.h>
+
+MotorEncoder encoder;
+
+void setup() {
+  Serial.begin(115200);
+  encoder.begin(2, 3, 600, 0, 100.0, 300, false, true);
+
+  // Set a custom initial tick count (e.g., home position)
+  encoder.setInitialTicks(100);  // starts counting from 100 ticks instead of 0
+}
+
+void loop() {
+  EncoderData data = encoder.read();
+  Serial.print("Ticks: "); Serial.println(data.tickCount);
+}
+```
+This allows to define a reference position, which can be useful in robotics, line-followers, or practical lab setups where the motor/wheel does not always start from zero.
+
 ##  Applications
 
 * Robotics
